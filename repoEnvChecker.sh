@@ -76,7 +76,7 @@ function runProgram(){
         printf "%s\n" \
         "${red}ISSUE DETECTED - Invalid input detected!" \
         "----------------------------------------------------" \
-        "filepath $filepath not a git directory!" \
+        "filepath $filepath is not a git directory!" \
         " " \
         "Exiting!" \
         " "
@@ -90,10 +90,10 @@ function runProgram(){
     "----------------------------------------------------" \
     " "
 
-    ### While loop to populate array
+    ### While loop to populate array, look for .env and .env.* files
     while IFS= read -r -d '' file; do
         env_files+=("$file")
-    done < <(find "$filepath" -type f -name ".env" -print0)
+    done < <(find "$filepath" -type f \( -name ".env" -o -name ".env.*" \) -print0)
 
     ### If no .env files found, exit
     if [[ ${#env_files[@]} -eq 0 ]]; then
