@@ -1,0 +1,13 @@
+Log of major revisions for prod scripts, newest -> oldest
+
+Script:
+Revision:
+Change:
+
+Script: repoEnvChecker.sh
+Revision: 20260822
+Change: Bug testing, added .env.* check as well.
+
+Script: repoEnvChecker.sh
+Revision: 20260821
+Change: Initial commit.
