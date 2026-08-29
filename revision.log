@@ -4,6 +4,10 @@ Script:
 Revision:
 Change:
 
+Script: repo_env_checker.sh
+Revision: 20260828
+Change: Renamed repoEnvChecker.sh to repo_env_checker.sh.
+
 Script: repoEnvChecker.sh
 Revision: 20260822
 Change: Bug testing, added .env.* check as well.
