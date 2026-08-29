@@ -78,7 +78,7 @@ function runProgram(){
         "----------------------------------------------------" \
         "filepath $filepath is not a git directory!" \
         " " \
-        "Exiting!" \
+        "Exiting!${normal}" \
         " "
 
         exit 1
