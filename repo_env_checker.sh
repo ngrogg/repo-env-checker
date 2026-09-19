@@ -17,7 +17,7 @@ green=$(tput setaf 2)
 normal=$(tput sgr0)
 
 # Help function
-function helpFunction(){
+function help_function(){
     printf "%s\n" \
     "Help" \
     "----------------------------------------------------" \
@@ -28,12 +28,12 @@ function helpFunction(){
     "check/Check" \
     "* Check a provided filepath for unignored .env files." \
     " " \
-    "Ex. ./repoEnvChecker.sh check /path/to/git/repo" \
+    "Ex. ./repo_env_checker.sh check /path/to/git/repo" \
     " "
 }
 
 # Function to run program
-function runProgram(){
+function run_program(){
     printf "%s\n" \
     "Check" \
     "----------------------------------------------------" \
@@ -60,7 +60,7 @@ function runProgram(){
         "Re-run script with valid input${normal}" \
         " "
 
-        helpFunction
+        help_function
 
         exit 1
     else
@@ -168,7 +168,7 @@ case "$1" in
     "----------------------------------------------------" \
     " "
 
-    helpFunction
+    help_function
 
     exit 0
     ;;
@@ -178,7 +178,7 @@ case "$1" in
     "----------------------------------------------------" \
     " "
 
-    runProgram "$2"
+    run_program "$2"
     ;;
 *)
     printf "%s\n" \
@@ -188,7 +188,7 @@ case "$1" in
     "Re-run script with valid input${normal}" \
     " "
 
-    helpFunction
+    help_function
 
     exit 1
     ;;
